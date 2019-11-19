@@ -1,4 +1,4 @@
-/*
+﻿/*
 调试、数据 、数据的存储 ——链式存储
 */
 #include<stdio.h>
@@ -17,7 +17,7 @@ typedef struct node{
 LinkList create_head_list(){//建立一个带有头结点的单链表
         LinkList h;
         LinkList p;
-        h=(LinkList)malloc(sizeof(LNode));
+        h=(LinkList)malloc(sizeof(LNode));		
         h->next=NULL;
         int x;//自己定义n个数据的结束标志，输入0结束
         char name[30];
@@ -34,20 +34,7 @@ LinkList create_head_list(){//建立一个带有头结点的单链表
         }       
         return h;
 }
-/*LinkList reverse_list(LinkList L){
-	LinkList h,q,r;
-	h=L;
-	h->next=NULL;
-	q=L->next;
-	while(q){
-	r=q;
-	q++;
-	r->next=h->next;
-	h->next=r;	
-	}
-	return h;
-	
-}*/
+
 void print_list(LinkList L){
         LinkList p;
         p=L->next;
@@ -57,12 +44,26 @@ void print_list(LinkList L){
                 p=p->next;
         }
 }
+LinkList reverse_list(LinkList L){
+LinkList p=L;
+LinkList q=p->next;
+p=NULL;
+LinkList r;
+while(q){
+  r=q->next;
+  q->next=p;
+  p=q;
+  q=r;
+} 
+return p;
+}
 int main(){
-		LinkList L,s;        
+		LinkList L,r;	
         L=create_head_list();        
-        print_list(L);
-        s=reverse_list(L);
-        print_list(s);
+        print_list(L);		
+        r=reverse_list(L);
+        print_list(r);
         system("pause");
         return 0;
 }
+
