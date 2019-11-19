@@ -56,7 +56,7 @@ LinkList locate_list(LinkList L,int e){
 	}
 	return NULL;
 }
-//统计
+//统计结点个数
 int count_list(LinkList L){
 	LinkList p;
 	int x;
