@@ -1,4 +1,4 @@
-/*
+﻿/*
 调试、数据 、数据的存储 ——链式存储
 */
 #include<stdio.h>
@@ -105,10 +105,26 @@ void pandu(LinkList p){
 	printf("没有找到！\n");
 	
 }
+//插入 
+void insert_list(LinkList p,ELenType e){
+	LinkList s= (LinkList)malloc(sizeof(LNode));
+	s->data=e; 
+
+	s->next=p->next;	p->next=s;
+	printf("插入成功！！\n");
+}
+void del_list(LinkList p){
+	LinkList s;
+	s=p->next; 
+	p->next=s->next;
+	free(s);
+	printf("删除成功！！\n");
+}
 int main(){
         //分配一个存储空间
         LinkList L,p;
         int sum;
+        ELenType e;
         L=create_list();
         print_list(L);
         p=locate_list(L,2);//找序号为2的节点
@@ -124,7 +140,16 @@ int main(){
         //查找第二个结点的前驱
 		p=find_pre_list(L,2);
 		pandu(p);
+		//插入
+		printf("请输入插入内容\n");
+		scanf("%d %s %s",&e.id,&e.name,&e.phone);
+		insert_list(p,e);
+		print_list(L);		
+		p=p->next;
+		printf("被删除的\n");
+		pandu(p->next);
+		del_list(p);
+		print_list(L);
         system("pause");
         return 0;
 }
-
