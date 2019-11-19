@@ -34,7 +34,7 @@ LinkList create_head_list(){//建立一个带有头结点的单链表
         }       
         return h;
 }
-LinkList reverse_list(LinkList L){
+/*LinkList reverse_list(LinkList L){
 	LinkList h,q,r;
 	h=L;
 	h->next=NULL;
@@ -47,7 +47,7 @@ LinkList reverse_list(LinkList L){
 	}
 	return h;
 	
-}
+}*/
 void print_list(LinkList L){
         LinkList p;
         p=L->next;
