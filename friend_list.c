@@ -1,5 +1,5 @@
 /*
-µ÷ÊÔ¡¢Êı¾İ ¡¢Êı¾İµÄ´æ´¢ ¡ª¡ªÁ´Ê½´æ´¢
+è°ƒè¯•ã€æ•°æ® ã€æ•°æ®çš„å­˜å‚¨ â€”â€”é“¾å¼å­˜å‚¨
 */
 #include<stdio.h>
 #include<stdlib.h>
@@ -12,14 +12,14 @@ typedef struct{
 }ELenType;
 typedef struct node{
         ELenType data;
-        struct node *next;//Ö¸ÏòÏÂÒ»¸öÔªËØµÄµØÖ·
+        struct node *next;//æŒ‡å‘ä¸‹ä¸€ä¸ªå…ƒç´ çš„åœ°å€
 }*LinkList,LNode;
-LinkList create_list(){//½¨Á¢Ò»¸ö´øÓĞÍ·½áµãµÄµ¥Á´±í
+LinkList create_list(){//å»ºç«‹ä¸€ä¸ªå¸¦æœ‰å¤´ç»“ç‚¹çš„å•é“¾è¡¨
         LinkList p,q;
         LinkList L;
         L=(LinkList)malloc(sizeof(LNode));
         q=L;
-        int x;//×Ô¼º¶¨Òån¸öÊı¾İµÄ½áÊø±êÖ¾£¬ÊäÈë0½áÊø
+        int x;//è‡ªå·±å®šä¹‰nä¸ªæ•°æ®çš„ç»“æŸæ ‡å¿—ï¼Œè¾“å…¥0ç»“æŸ
 
         char name[30];
         char phone[20];
@@ -33,19 +33,19 @@ LinkList create_list(){//½¨Á¢Ò»¸ö´øÓĞÍ·½áµãµÄµ¥Á´±í
                  q=p;
                  scanf("%d%s%s",&x,&name,&phone);
         }
-        q->next=NULL;//Á´±í×îºóÒ»¸ö½ÚµãÇå¿Õ
+        q->next=NULL;//é“¾è¡¨æœ€åä¸€ä¸ªèŠ‚ç‚¹æ¸…ç©º
         return L;
 }
 void print_list(LinkList L){
         LinkList p;
         p=L->next;
-        printf("ĞòºÅ\tĞÕÃû\tµç»°\n");
+        printf("åºå·\tå§“å\tç”µè¯\n");
         while(p){
                 printf("%d\t%s\t%s\n",p->data.id,p->data.name,p->data.phone);
                 p=p->next;
         }
 }
-//²éÕÒ
+//æŸ¥æ‰¾
 LinkList locate_list(LinkList L,int e){
         LinkList p;
         p=L->next;
@@ -56,7 +56,7 @@ LinkList locate_list(LinkList L,int e){
         }
         return NULL;
 }
-//Í³¼Æ½Úµã¸öÊı 
+//ç»Ÿè®¡èŠ‚ç‚¹ä¸ªæ•° 
 int count_list(LinkList L){
         LinkList p;
         int x;
@@ -67,7 +67,7 @@ int count_list(LinkList L){
         }
         return x;
 }
-//²éÕÒ½Úµã
+//æŸ¥æ‰¾èŠ‚ç‚¹
 LinkList  find_list(LinkList L,int x){
 	LinkList p;
         int i=0;
@@ -81,7 +81,7 @@ LinkList  find_list(LinkList L,int x){
         }
         return NULL;
 }
-//c²éÕÒÄ³¸ö½ÚµãµÄÇ°Çı
+//cæŸ¥æ‰¾æŸä¸ªèŠ‚ç‚¹çš„å‰é©±
 LinkList find_pre_list(LinkList L,int x) {
 		LinkList p,pre;
         int i=0;
@@ -99,29 +99,29 @@ LinkList find_pre_list(LinkList L,int x) {
 }
 void pandu(LinkList p){
 	if(p){
-	printf("ĞòºÅ\tĞÕÃû\tµç»°\n");
+	printf("åºå·\tå§“å\tç”µè¯\n");
     printf("%d\t%s\t%s\n",p->data.id,p->data.name,p->data.phone);
 	}else
-	printf("Ã»ÓĞÕÒµ½£¡\n");
+	printf("æ²¡æœ‰æ‰¾åˆ°ï¼\n");
 	
 }
 int main(){
-        //·ÖÅäÒ»¸ö´æ´¢¿Õ¼ä
+        //åˆ†é…ä¸€ä¸ªå­˜å‚¨ç©ºé—´
         LinkList L,p;
         int sum;
         L=create_list();
         print_list(L);
-        p=locate_list(L,2);//ÕÒĞòºÅÎª2µÄ½Úµã
+        p=locate_list(L,2);//æ‰¾åºå·ä¸º2çš„èŠ‚ç‚¹
         if(p!=NULL)
-        	printf("ÕÒµ½ÁË\n");
+        	printf("æ‰¾åˆ°äº†\n");
         else
-            printf("Ã»ÕÒµ½\n");
+            printf("æ²¡æ‰¾åˆ°\n");
         sum=count_list(L);
-        printf("¹²ÓĞ%d¸ö½Úµã\n",sum);
-        //²éÕÒµÚ2¸ö½Úµã
+        printf("å…±æœ‰%dä¸ªèŠ‚ç‚¹\n",sum);
+        //æŸ¥æ‰¾ç¬¬2ä¸ªèŠ‚ç‚¹
         p=find_list(L,2);
         pandu(p);
-        //²éÕÒµÚ¶ş¸ö½áµãµÄÇ°Çı
+        //æŸ¥æ‰¾ç¬¬äºŒä¸ªç»“ç‚¹çš„å‰é©±
 		p=find_pre_list(L,2);
 		pandu(p);
         system("pause");
