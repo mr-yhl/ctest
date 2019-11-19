@@ -1,5 +1,5 @@
 /*
-���ԡ����� �����ݵĴ洢 ������ʽ�洢
+调试、数据 、数据的存储 ——链式存储
 */
 #include<stdio.h>
 #include<stdlib.h>
@@ -12,14 +12,14 @@ typedef struct{
 }ELenType;
 typedef struct node{
         ELenType data;
-        struct node *next;//ָ����һ��Ԫ�صĵ�ַ
+        struct node *next;//指向下一个元素的地址
 }*LinkList,LNode;
-LinkList create_head_list(){//����һ������ͷ���ĵ�����
+LinkList create_head_list(){//建立一个带有头结点的单链表
         LinkList h;
         LinkList p;
         h=(LinkList)malloc(sizeof(LNode));
         h->next=NULL;
-        int x;//�Լ�����n�����ݵĽ�����־������0����
+        int x;//自己定义n个数据的结束标志，输入0结束
         char name[30];
         char phone[20];
         scanf("%d%s%s",&x,&name,&phone);
@@ -51,7 +51,7 @@ LinkList reverse_list(LinkList L){
 void print_list(LinkList L){
         LinkList p;
         p=L->next;
-        printf("���\t����\t�绰\n");
+        printf("序号\t姓名\t电话\n");
         while(p){
                 printf("%d\t%s\t%s\n",p->data.id,p->data.name,p->data.phone);
                 p=p->next;
