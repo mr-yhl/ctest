@@ -26,18 +26,41 @@
 				text-align: center;
 				margin-left:10px;
 				display: block;
-				width: 180px;
+				width: 150px;
 				height: 40px;
-				border: 1px solid rgba(250,0,255,0.7);
+				/*border: 1px solid rgba(250,0,255,0.7);*/
+				background-color: #fcfbed;
+				opacity: 0.5;
 				text-decoration:none;				
 	            line-height: 45px;
-	            padding: 0 11px;	                       
+	            padding: 0 9px;	                       
 	            border-radius: 3px;	            
 	            display: inline-block;	            
-	            font-size: 18px;
-	            color: white;
+	            font-size: 16px;
+	            color: #b585f4;
 	            outline: none;
 			}
+			#one a:hover{
+				text-align: center;
+				margin-left:10px;
+				display: block;
+				width: 150px;
+				height: 40px;
+				/*border: 1px solid rgba(250,0,255,0.7);*/
+				background-color: #e7fdde;
+				opacity: 0.5;
+				text-decoration:none;				
+	            line-height: 45px;
+	            padding: 0 9px;	                       
+	            border-radius: 3px;	            
+	            display: inline-block;	            
+	            font-size: 16px;
+	            font-weight: bold;
+	            color: #e66f4c;
+	            outline: none;
+	            transform: scale(1.1);
+			}
+			
 			#two{
 				width: 98%;
 				margin: 10px auto;
@@ -51,17 +74,24 @@
 			}
 			p{
 				font-family: "微软雅黑";
-				font-size: 20px;
+				font-size: 16px;
 				text-indent: 40px;
 				color: #8B8989;
 			}
 			#two a{
 				text-decoration:none;	
-				color: #CDB5CD;
-				position:absolute;
-				margin-right: 5%;				
-				right: 1px;
-				font-size: 16px;
+				color: #CDB50D;
+				/*position:absolute;
+				margin-left: 5%;		*/		
+				/*right: 1px;*/
+				margin-left: 5px;
+				font-size: 12px;
+			}
+			#two a:hover{
+				text-decoration:none;
+				color: #C3650D;				
+				margin-left: 5px;
+				font-size: 14px;
 			}
 			#foot{
 			width: 100%;
@@ -69,7 +99,7 @@
 			bottom: 0;
 			text-align: center;
 			font-family: "微软雅黑";
-			font-size: 16px;
+			font-size: 14px;
 			color: #ccc;
 			}
 		</style>
@@ -77,34 +107,42 @@
 	<body>
 		<div id="one">
 		<h1>数据结构小项目</h1>
-		<a href="https://github.com/mr-yhl/ctest">查看内容</a>
-		<a href="https://github.com/mr-yhl/ctest/archive/master.zip">下载全部（国外）</a>
-                <a href="https://gitee.com/mryhl/ctest/repository/archive/master.zip">下载全部（国内）</a >
+		<a href="https://gitee.com/mryhl/ctest">查看内容(国内C)</a>
+		<a href="https://github.com/mr-yhl/ctest">查看内容（国外F）</a>
+		<a href="https://gitee.com/mryhl/ctest/repository/archive/master.zip">下载全部（国内C）</a >
+        <a href="https://github.com/mr-yhl/ctest/archive/master.zip">下载全部（国外F）</a>
 		</div>
 		<div id="two">
 			
-		<h3>图书管理系统</h3>
+		<h3>图书管理系统
+			<a href="https://gitee.com/mryhl/ctest/blob/master/book_list.cpp">查看（C）</a>
+			<a href="https://github.com/mr-yhl/ctest/blob/master/book_list.cpp">查看（F）</a>
+		</h3>
 		<p>
 			课上学习了线性表的使用，根据所学知识，设计完成了此程序。本程序界面简单，结构清晰。程序运行就直接进入界面
 			并需要直接输入数据，当输入 999 999时结束输入，同时输出此线性表。然后进入到增删改查的功能选择界面。
 			
 		</p>
-		<a href="https://github.com/mr-yhl/ctest/blob/master/book_list.cpp">查看代码</a>
 		
-			<h3>人脉管理系统</h3>
+		
+			<h3>人脉管理系统
+				<a href="https://gitee.com/mryhl/ctest/blob/master/friend_list.c">查看（C）</a>
+				<a href="https://github.com/mr-yhl/ctest/blob/master/friend_list.c">查看（F）</a></h3>
 		<p>
 			本程序时单链表的练习。目前只完成了单链表的创建，统计，输入输出简单内容。<b>新添加了部分注释内容。完成了插入删除等新功能，并调试完成。</b>
-		</p>
-		<a href="https://github.com/mr-yhl/ctest/blob/master/friend_list.c">查看代码</a>
-		<h3>单链表头插法</h3>
+		</p>		
+		<h3>单链表头插法
+			<a href="https://gitee.com/mryhl/ctest/blob/master/toucha.cpp">查看（C）</a>
+			<a href="https://github.com/mr-yhl/ctest/blob/master/toucha.cpp">查看（F）</a></h3>
 		<p>
 			本程序时单链表的练习。单链表头插法及打印，链表逆转未实现
 		</p>
-		<a href="https://github.com/mr-yhl/ctest/blob/master/toucha.cpp">查看代码</a>
+		
 		</div>
 		<div id="foot">
-			mr-yhl &copy; 个人练习<br />
-			仅供参考交流使用，不要用于其他用途，谢谢合作
+			mr-yhl &copy; 个人学习练习<br />
+			仅供参考交流使用，不要用于其他用途，谢谢合作<br/>
+			国内仓库为码云，国外仓库为GitHub
 		</div>
 	</body>
 </html>
