@@ -14,7 +14,8 @@ typedef struct node{
         ELenType data;
         struct node *next;//指向下一个元素的地址
 }*LinkList,LNode;
-LinkList create_head_list(){//建立一个带有头结点的单链表
+//建立一个带有头结点的单链表
+LinkList create_head_list(){
         LinkList h;
         LinkList p;
         h=(LinkList)malloc(sizeof(LNode));		
@@ -34,7 +35,7 @@ LinkList create_head_list(){//建立一个带有头结点的单链表
         }       
         return h;
 }
-
+//输出 
 void print_list(LinkList L){
         LinkList p;
         p=L->next;
@@ -44,18 +45,20 @@ void print_list(LinkList L){
                 p=p->next;
         }
 }
+//逆转单链表 
 LinkList reverse_list(LinkList L){
-LinkList p=L;
-LinkList q=p->next;
-p=NULL;
-LinkList r;
-while(q){
-  r=q->next;
-  q->next=p;
-  p=q;
-  q=r;
-} 
-return p;
+	LinkList p=L;
+	LinkList q=p->next;
+	p->next=NULL;
+	LinkList r;
+	while(q){
+	  r=q;
+	  q=q->next;
+	  r->next=p->next;
+	  p->next=r;
+	  //q=r;
+	} 
+	return p;
 }
 int main(){
 		LinkList L,r;	
