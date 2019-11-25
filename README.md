@@ -9,4 +9,8 @@ ctest
   > 有一个版本实现了单链表头插法及单链表逆转主要功能。
 * 栈的简单应用  [github](https://github.com/mr-yhl/ctest/blob/master/stack_ex.cpp)  [码云](https://gitee.com/mryhl/ctest/blob/master/stack_ex.cpp)<br/>
   > 主要是初始化，判空判满进栈出栈，查看栈顶元素等功能。
+* 栈的十进制转八进制  [github](https://github.com/mr-yhl/ctest/blob/master/trans10to8.cpp)  [码云](https://gitee.com/mryhl/ctest/blob/master/trans10to8.cpp)<br/>
+  > 本程序是栈的练习。主要是将一个十进制数转换成八进制数。
+* 栈的括号匹配  [github](https://github.com/mr-yhl/ctest/blob/master/khpp.cpp)  [码云](https://gitee.com/mryhl/ctest/blob/master/khpp.cpp)<br/>
+  > 本程序是栈的练习。主要是判断前后括号是否匹配。
 
