@@ -6,25 +6,50 @@
 #define N 10  
 typedef int ElemType;
 typedef struct{	 
-	//ElemType data[N];
+	ElemType data[N];
 	int front,rear;//队头队尾 
 	//队头指向第一个元素，队尾指向最后一个元素的后面 
 }SqQueue; 
-//初始化
-void init_queue(SqQueue *q){
-	q->front=q->rear=0;
-} 
-void empty_queue(SqQueue q){
-	if(q.front==q.rear)
-	return 1;
-	else
-	return 0;
-} 
-void full_queue(SqQueue q){
-	if((q.rear+1)%N == q.front)
+int empty_queue(SqQueue *q){
+	//printf("%p\n",q);
+	if(q->front==q->rear)
 	return 1;	
 	return 0;
 } 
+int full_queue(SqQueue *q){
+	//printf("%p\n",q);
+	if((q->rear+1)%N == q->front)
+	return 1;	
+	return 0;
+} 
+//进入队列 
+void Enqueue(SqQueue *q,ElemType e){
+	if(!full_queue(q))
+	{
+	q->data[q->rear]=e;
+	q->rear=(q->rear+1)%N;	
+	}
+} 
+void init_queue(SqQueue *q){
+	q->front=q->rear=0;
+} 
+//出队列
+void Dequeue(SqQueue *q,ElemType *y){	
+	if(!empty_queue(q)){			
+		*y=q->data[q->front];
+		q->front=(q->front+1)%N;
+	}
+}
 int main(){
-	
+	SqQueue q;
+	ElemType x=134,y;
+	init_queue(&q);
+	//进入队列 
+	Enqueue(&q,x); 
+	Enqueue(&q,135);
+	Dequeue(&q,&y);	
+	printf("出队列元素%d\n",y);
+	Dequeue(&q,&y);	
+	printf("出队列元素%d\n",y);
+	return 0;
 } 
