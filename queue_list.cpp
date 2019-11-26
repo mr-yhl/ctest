@@ -60,11 +60,5 @@ int main(){
 	printf("出队列元素%d\n",y);
 	
 	
-	/*if(q.rear>q.front)
-		n=q.rear-q.front;
-	else
-		n=N+(q.rear-q.front);
-	*/
-	
 	return 0;
 } 
