@@ -40,16 +40,31 @@ void Dequeue(SqQueue *q,ElemType *y){
 		q->front=(q->front+1)%N;
 	}
 }
+//统计元素数 
+int count_queue(SqQueue q){
+	return (N+q.rear-q.front)%N;
+}
 int main(){
 	SqQueue q;
+	int n;
 	ElemType x=134,y;
 	init_queue(&q);
 	//进入队列 
 	Enqueue(&q,x); 
 	Enqueue(&q,135);
+	n=count_queue(q);
+	printf("元素个数%d\n",n);
 	Dequeue(&q,&y);	
 	printf("出队列元素%d\n",y);
 	Dequeue(&q,&y);	
 	printf("出队列元素%d\n",y);
+	
+	
+	/*if(q.rear>q.front)
+		n=q.rear-q.front;
+	else
+		n=N+(q.rear-q.front);
+	*/
+	
 	return 0;
 } 
