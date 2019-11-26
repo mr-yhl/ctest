@@ -13,4 +13,7 @@ ctest
   > 本程序是栈的练习。主要是将一个十进制数转换成八进制数。
 * 栈的括号匹配  [github](https://github.com/mr-yhl/ctest/blob/master/khpp.cpp)  [码云](https://gitee.com/mryhl/ctest/blob/master/khpp.cpp)<br/>
   > 本程序是栈的练习。主要是判断前后括号是否匹配。
-
+* 队列练习  [github](https://github.com/mr-yhl/ctest/blob/master/queue_list.cpp)  [码云](https://gitee.com/mryhl/ctest/blob/master/queue_list.cpp)<br/>
+  > 本程序是队列的练习。主要进出，判空判满，初始化等。
+* 队列练习1  [github](https://github.com/mr-yhl/ctest/blob/master/queue_list_1.cpp)  [码云](https://gitee.com/mryhl/ctest/blob/master/queue_list_1.cpp)<br/>
+  > 本程序是队列的练习。主要进出等。
