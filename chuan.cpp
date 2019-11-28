@@ -80,7 +80,7 @@ int index_s(HString s,HString t,int pos){
 int main(){
 //char str[]={"赏花归去马如飞酒力微醒时已暮"};
 char str[]={"12345632"};
-char str1[]={"4"};
+char str1[]={"56"};
 HString s,t;
 int k;
 Assign(&s,str);
