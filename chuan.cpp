@@ -15,6 +15,7 @@ typedef struct
 	char *ch;
 	int len;
 }HString;
+//字符串存储时。0单元不用，从1开始存字符，输入时也从1开始 
 /*
 typedef struct node
 {
@@ -50,15 +51,42 @@ int get_len(HString s){
 	return s.len;
 }*/ 
 void print_1(HString s){
-	printf("\t%s\n",s.ch);
-	printf("%d\n",s.len);
+	printf("字符串为\t%s\n",s.ch);
+	printf("长度为%d\n",s.len);
 }
-
+int index_s(HString s,HString t,int pos){
+	int m,n,i,j;
+	i=pos;
+	j=pos;
+	m=s.len;
+	n=t.len;
+	while(i<m&&j<n){
+		if(s.ch[i] == t.ch[j]){
+			//i,j同步后移
+			i++;
+			j++; 
+		}
+		else{
+			//i回退到本次比较开头的下一个位置；j为1；
+			i=i-j+2;
+			j=1; 
+		}
+	}
+	if(i<m)
+	return i-j+1;
+	else
+	return -1; 
+}
 int main(){
 //char str[]={"赏花归去马如飞酒力微醒时已暮"};
-char str[]={"1234"};
-HString s;
+char str[]={"12345632"};
+char str1[]={"4"};
+HString s,t;
+int k;
 Assign(&s,str);
+Assign(&t,str1);
 print_1(s);	
+k=index_s(s,t,0);
+printf("位置为%d",k);
 return 0;
 }  
