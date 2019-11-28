@@ -17,3 +17,5 @@ ctest
   > 本程序是队列的练习。主要进出，判空判满，初始化等。
 * 队列练习1  [github](https://github.com/mr-yhl/ctest/blob/master/queue_list_1.cpp)  [码云](https://gitee.com/mryhl/ctest/blob/master/queue_list_1.cpp)<br/>
   > 本程序是队列的练习。主要进出等。
+* 字符串练习  [github](https://github.com/mr-yhl/ctest/blob/master/chuan.cpp)  [码云](https://gitee.com/mryhl/ctest/blob/master/chuan.cpp)<br/>
+  > 本程序是字符串的输入输出，判定长度，对比等操作。
