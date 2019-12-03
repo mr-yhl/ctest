@@ -43,7 +43,9 @@ void Travers(TSMatrix *B,TSMatrix *A){
 	int i,j;
 	int k=0;//设定k表示B中存储元素的下标；
 	//共有A->n列，扫描n次；在A中和每个元素的列对比； 
-
+	B->m=A->n;
+	B->n=A->m;
+	B->t=A->t;
 	 for(j=1;j<A->n;j++){ 
 	 	for(i=0;i<A->t;i++){ 		 	 	
 			if(A->data[i].j==j)
