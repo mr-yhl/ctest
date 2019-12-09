@@ -2,6 +2,15 @@
 #include<stdlib.h>
 #include <string.h>
 #define N 80
+/*
+1A 2B 3C 4D
+		A
+	   / \
+	  B   C
+	/
+   D
+先根遍历：ABDC 
+*/ 
 //二叉链表
 typedef char ElemType;//存储内容 
 
@@ -33,10 +42,21 @@ BiTree creat_btree(){
 		}
 	return bt;
 } 
-
+void pre_order(BiTree bt){
+	if(bt){
+		printf("%c ",bt->data);
+		pre_order(bt->lch);
+		pre_order(bt->rch);
+	}
+}
 
 int main(){
 	BiTree bt;
+	//创建 
 	bt=creat_btree();
+	//二叉链表从内存中读取 
+	printf("先根遍历次序为：\n");
+	pre_order(bt); 
+	printf("\n");
 	return 0;
 } 
