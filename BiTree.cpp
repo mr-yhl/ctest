@@ -49,7 +49,24 @@ void pre_order(BiTree bt){
 		pre_order(bt->rch);
 	}
 }
-
+/*
+//非递归写法 
+void pre_order_no(BiTree bt){
+	//栈 
+	//p沿着根节点的左子树，右子树不空就进栈
+	BiTree s[N],p;
+	int top = 0;
+	p=bt;
+	while(p){
+		printf("%c ",p->data);
+		if(p->rch)
+		s[top++]=p->rch;
+		p=p->lch;
+		if(!p)
+			p=s[--top];
+	}
+	 
+}*/
 int main(){
 	BiTree bt;
 	//创建 
@@ -58,5 +75,8 @@ int main(){
 	printf("先根遍历次序为：\n");
 	pre_order(bt); 
 	printf("\n");
+//	printf("(栈)先根遍历次序为：\n");
+//	pre_order_no(bt); 
+//	printf("\n");
 	return 0;
 } 
