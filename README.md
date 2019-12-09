@@ -21,3 +21,5 @@ ctest
   > 本程序是字符串的输入输出，判定长度，对比等操作。
 * 三元组表  [github](https://github.com/mr-yhl/ctest/blob/master/TSMatrix.cpp)  [码云](https://gitee.com/mryhl/ctest/blob/master/TSMatrix.cpp)<br/>
   > 本程序是三元组表的练习，输入输出等功能。
+* 二叉树的简单应用  [github](https://github.com/mr-yhl/ctest/blob/master/BiTree.cpp)  [码云](https://gitee.com/mryhl/ctest/blob/master/BiTree.cpp)<br/>
+  > 本程序是二叉树的练习，输入输出等功能。
