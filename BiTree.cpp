@@ -80,10 +80,14 @@ void in_order(BiTree bt){
 }
 //后跟遍历 
 void po_order(BiTree bt){
+	//int i=0; 
 	if(bt){		
 		po_order(bt->lch);		
 		po_order(bt->rch);
 		printf("%c ",bt->data);
+		//统计叶子节点
+		//if(bt->lch==NULL && bt->rch==NULL) 
+		//i++;
 	}
 }
 int main(){
@@ -103,5 +107,7 @@ int main(){
 	printf("后根遍历次序为：\n");
 	po_order(bt); 
 	printf("\n");
+	//用：叶子节点；高是多少 
+	//建立一个二叉树，从一个字符串或从两个字符串建立 
 	return 0;
 } 
