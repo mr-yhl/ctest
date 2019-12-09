@@ -10,6 +10,8 @@
 	/
    D
 先根遍历：ABDC 
+中根遍历：DBAC 
+后根遍历：DBCA 
 */ 
 //二叉链表
 typedef char ElemType;//存储内容 
@@ -42,6 +44,7 @@ BiTree creat_btree(){
 		}
 	return bt;
 } 
+//先跟遍历 
 void pre_order(BiTree bt){
 	if(bt){
 		printf("%c ",bt->data);
@@ -67,6 +70,22 @@ void pre_order_no(BiTree bt){
 	}
 	 
 }*/
+//中跟遍历 
+void in_order(BiTree bt){
+	if(bt){		
+		in_order(bt->lch);
+		printf("%c ",bt->data);
+		in_order(bt->rch);
+	}
+}
+//后跟遍历 
+void po_order(BiTree bt){
+	if(bt){		
+		po_order(bt->lch);		
+		po_order(bt->rch);
+		printf("%c ",bt->data);
+	}
+}
 int main(){
 	BiTree bt;
 	//创建 
@@ -78,5 +97,11 @@ int main(){
 //	printf("(栈)先根遍历次序为：\n");
 //	pre_order_no(bt); 
 //	printf("\n");
+	printf("中根遍历次序为：\n");
+	in_order(bt); 
+	printf("\n");
+	printf("后根遍历次序为：\n");
+	po_order(bt); 
+	printf("\n");
 	return 0;
 } 
