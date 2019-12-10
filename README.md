@@ -23,3 +23,5 @@ ctest
   > 本程序是三元组表的练习，输入输出等功能。
 * 二叉树的简单应用  [github](https://github.com/mr-yhl/ctest/blob/master/BiTree.cpp)  [码云](https://gitee.com/mryhl/ctest/blob/master/BiTree.cpp)<br/>
   > 本程序是二叉树的练习，输入先中后遍历等功能。
+* 哈夫曼树  [github](https://github.com/mr-yhl/ctest/blob/master/hafman.cpp)  [码云](https://gitee.com/mryhl/ctest/blob/master/hafman.cpp)<br/>
+  > 本程序是哈夫曼树的练习。
