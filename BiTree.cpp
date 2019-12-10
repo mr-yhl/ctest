@@ -43,6 +43,19 @@ BiTree creat_btree(){
 			scanf("%d%c",&i,&ch);
 		}
 	return bt;
+	/*
+	BiTree T;
+	scanf(&ch);
+    if(ch=='')  
+		T->NULL;
+	else{
+      T=(BiTNode *)malloc(sizeof((BiTNode));
+	  T->data->ch;//生 成根结点
+      T->lch= creat_btree(); //构造左子树
+	  T->rch=creat_btree();//构造右子树
+	}
+	return (T);
+	*/ 
 } 
 //先跟遍历 
 void pre_order(BiTree bt){
