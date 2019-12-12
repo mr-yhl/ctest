@@ -25,3 +25,5 @@ ctest
   > 本程序是二叉树的练习，输入先中后遍历等功能。
 * 哈夫曼树  [github](https://github.com/mr-yhl/ctest/blob/master/hafman.cpp)  [码云](https://gitee.com/mryhl/ctest/blob/master/hafman.cpp)<br/>
   > 本程序是哈夫曼树的练习。
+* 图  [github](https://github.com/mr-yhl/ctest/blob/master/pic.cpp)  [码云](https://gitee.com/mryhl/ctest/blob/master/pic.cpp)<br/>
+  > 本程序是图的练习。
