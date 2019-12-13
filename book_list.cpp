@@ -113,8 +113,8 @@ void first_w(){
 	printf("+ 2：插入功能                            +\n");
 	printf("+ 3：删除功能                            +\n");
 	printf("+ 4：统计功能                            +\n");
-	printf("+ 5：结束程序                            +\n");
-	//printf("+ 6：清除屏幕                            +\n");
+	printf("+ 5：排序功能                            +\n");
+	printf("+ 6：结束程序                            +\n");
 	printf("==========================================\n");
 	
 }
@@ -137,6 +137,23 @@ int sta_list(Sqlist L,float s){
 	}
 	return j;
 } 
+//排序功能 
+void pai_list(Sqlist *L)
+{
+	ElemType t;
+	int min=0,i=0;	
+	for(min;min<L->len;min++)
+	for(i=min;i<L->len;i++)
+	if(L->data[min].price>L->data[i].price){
+		t=L->data[min];
+		L->data[min]=L->data[i];
+		L->data[i]=t;
+	}
+		
+	printf("按价格升序排列后\n");
+	output_list(*L);
+	
+}
 int main(){
 	//用线性表，存n条数据； 
 	Sqlist L;	
@@ -207,9 +224,9 @@ int main(){
 			printf("高于%f元的图书共有%d本\n",price,pos);
 		} 
 		else if(fun ==5)
+			pai_list(&L);
+		else if(fun == 6)
 			break;
-//		else if(fun == 6)
-//		system("cls");//清除屏幕 
 		else
 			printf("输入错误。\n");
 		printf("请按回车键继续...");
@@ -219,4 +236,3 @@ int main(){
 	system("pause");
 	return 0;
 }
-
